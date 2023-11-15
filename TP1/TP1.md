@@ -55,16 +55,16 @@ The one with the biggest gap is Basmatin then Camargue and Japanese.
 By applying my getBoundary() function on the different segmented images, I could get theses results (SVG images).
 
 
+---------------
 **Japanese**
 
 ![Japanese boundary result](BoundaryJapanese.svg "Japanese Boundary result")
 
-
+---------------
 **Camargue**
-
 ![Camargue boundary result](BoundaryCamargue.svg "Camargue Boundary result")
 
-
+---------------
 **Basmati**
 
 ![Basmati boundary result](BoundaryBasmati.svg "Basmati Boundary result")
