@@ -3,9 +3,9 @@
 # No other meaning or use of this file is supported.
 
 method=git
-command=/Applications/CMake.app/Contents/bin/cmake;-P;/Users/dylandejesus/Documents/Dev/Geometrie_discrète/Project/build/_deps/eigen-subbuild/eigen-populate-prefix/tmp/eigen-populate-gitclone.cmake
-source_dir=/Users/dylandejesus/Documents/Dev/Geometrie_discrète/Project/build/_deps/eigen-src
-work_dir=/Users/dylandejesus/Documents/Dev/Geometrie_discrète/Project/build/_deps
+command=/Applications/CMake.app/Contents/bin/cmake;-P;/Users/dylandejesus/Documents/Dev/Geometrie_discrète/Discrete-Geometry/build/_deps/eigen-subbuild/eigen-populate-prefix/tmp/eigen-populate-gitclone.cmake
+source_dir=/Users/dylandejesus/Documents/Dev/Geometrie_discrète/Discrete-Geometry/build/_deps/eigen-src
+work_dir=/Users/dylandejesus/Documents/Dev/Geometrie_discrète/Discrete-Geometry/build/_deps
 repository=https://github.com/libigl/eigen-git-mirror.git
 remote=origin
 init_submodules=TRUE

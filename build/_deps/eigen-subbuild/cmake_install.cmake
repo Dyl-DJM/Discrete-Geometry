@@ -1,4 +1,4 @@
-# Install script for directory: /Users/dylandejesus/Documents/Dev/Geometrie_discrète/Project/build/_deps/eigen-subbuild
+# Install script for directory: /Users/dylandejesus/Documents/Dev/Geometrie_discrète/Discrete-Geometry/build/_deps/eigen-subbuild
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/dylandejesus/Documents/Dev/Geometrie_discrète/Project/build/_deps/eigen-subbuild/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/dylandejesus/Documents/Dev/Geometrie_discrète/Discrete-Geometry/build/_deps/eigen-subbuild/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

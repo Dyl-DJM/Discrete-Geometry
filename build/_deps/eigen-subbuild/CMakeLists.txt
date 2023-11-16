@@ -22,8 +22,8 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 include(ExternalProject)
 ExternalProject_Add(eigen-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/libigl/eigen-git-mirror.git" "GIT_TAG" "tags/3.3.7" "GIT_SHALLOW" "TRUE"
-                    SOURCE_DIR          "/Users/dylandejesus/Documents/Dev/Geometrie_discrète/Project/build/_deps/eigen-src"
-                    BINARY_DIR          "/Users/dylandejesus/Documents/Dev/Geometrie_discrète/Project/build/_deps/eigen-build"
+                    SOURCE_DIR          "/Users/dylandejesus/Documents/Dev/Geometrie_discrète/Discrete-Geometry/build/_deps/eigen-src"
+                    BINARY_DIR          "/Users/dylandejesus/Documents/Dev/Geometrie_discrète/Discrete-Geometry/build/_deps/eigen-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

@@ -4,7 +4,7 @@
 # compile CXX with /Library/Developer/CommandLineTools/usr/bin/c++
 CXX_DEFINES = -DAPPLE -DBOOST_ALL_NO_LIB -DUNIX -DWITH_EIGEN=true
 
-CXX_INCLUDES = -isystem /Users/dylandejesus/libs/include -isystem /Users/dylandejesus/Documents/Dev/Geometrie_discrète/Project/build/_deps/eigen-src
+CXX_INCLUDES = -isystem /Users/dylandejesus/libs/include -isystem /Users/dylandejesus/Documents/Dev/Geometrie_discrète/Discrete-Geometry/build/_deps/eigen-src
 
 CXX_FLAGS =  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -std=gnu++11
 

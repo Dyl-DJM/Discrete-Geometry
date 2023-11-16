@@ -111,7 +111,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Applications/CMake.app/Contents/share/cmake-3.25/Modules/Platform/Darwin.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.25/Modules/Platform/UnixPaths.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.25/Modules/SelectLibraryConfigurations.cmake"
-  "/Users/dylandejesus/Documents/Dev/Geometrie_discrète/Project/CMakeLists.txt"
+  "/Users/dylandejesus/Documents/Dev/Geometrie_discrète/Discrete-Geometry/CMakeLists.txt"
   "CMakeFiles/3.25.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.25.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.25.1/CMakeSystem.cmake"
