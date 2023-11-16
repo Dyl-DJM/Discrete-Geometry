@@ -69,4 +69,3 @@ By applying my getBoundary() function on the different segmented images, I could
 
 ![Basmati boundary result](BoundaryBasmati.svg "Basmati Boundary result")
 
-

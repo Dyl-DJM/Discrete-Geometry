@@ -38,9 +38,6 @@ Curve getBoundary(T &object)
 
     Board2D aBoard;
 
-    Curve boundaryCurve;
-    // 3) Create a curve from a vector
-
     GradientColorMap<int> cmap_grad(0, boundaryPoints.size());
     cmap_grad.addColor(Color(50, 50, 255));
     cmap_grad.addColor(Color(255, 0, 0));
@@ -55,6 +52,9 @@ Curve getBoundary(T &object)
     }
     aBoard.saveSVG("Basmout.svg", 200, 200, 1);
 
+    // 3) Create a curve from a vector
+    Curve boundaryCurve;
+    boundaryCurve.initFromSCellsVector(boundaryPoints.at(1));
     return boundaryCurve;
 }
 
@@ -95,12 +95,27 @@ int main(int argc, char **argv)
 
     std::cout << " number of components : " << objects.size() << endl; // Right now size of "objects" is the number of conected components
 
-    getBoundary<ObjectType>(digitalObj);
+    // Step 4
+    // types definition
+    typedef std::vector<Point> Range;
+    typedef Range::const_iterator ConstIterator;
+    typedef StandardDSS4Computer<ConstIterator> SegmentComputer;
+    typedef GreedySegmentation<SegmentComputer> Segmentation;
 
-    // This is an example how to create a pdf file for each object
-    Board2D aBoard; // use "Board2D" to save output
-    // sendToBoard(aBoard, objects[0], Color::Red);   // send the connected component "objects[0]" to "aBoard"
-    // aBoard.saveCairo("out.pdf",Board2D::CairoPDF); // do not forget to change the path!
+    auto curveFromBoundary = getBoundary<ObjectType>(digitalObj);
+
+    // Segmentation
+    SegmentComputer recognitionAlgorithm;
+    auto curveRange = curveFromBoundary.();
+    Segmentation theSegmentation(curveFromBoundary.begin(), curveFromBoundary.end(), recognitionAlgorithm);
+
+    Segmentation::SegmentComputerIterator i = theSegmentation.begin();
+    Segmentation::SegmentComputerIterator end = theSegmentation.end();
+    for (; i != end; ++i)
+    {
+        SegmentComputer current(*i);
+        trace.info() << current << std::endl; // standard output
+    }
 
     return 0;
 }
