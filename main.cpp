@@ -10,6 +10,12 @@
 #include <DGtal/topology/helpers/Surfaces.h>
 #include "DGtal/io/Color.h"
 
+
+// Must add to have the greedy part to work
+#include "DGtal/geometry/curves/GreedySegmentation.h"
+
+
+
 using namespace std;
 using namespace DGtal;
 using namespace Z2i;
@@ -50,11 +56,15 @@ Curve getBoundary(T &object)
         sendToBoard(aBoard, *it, Color::Red);
         d++;
     }
-    aBoard.saveSVG("Basmout.svg", 200, 200, 1);
+    aBoard.saveSVG("out.svg", 200, 200, 1);
 
     // 3) Create a curve from a vector
     Curve boundaryCurve;
-    boundaryCurve.initFromSCellsVector(boundaryPoints.at(1));
+    std::vector<SCell> contour;                           //contour
+
+    //tracking and init grid curve
+    Surfaces<KSpace>::track2DBoundary(contour, kSpace, SAdj, set2d, aCell);
+    boundaryCurve.initFromSCellsVector(contour);
     return boundaryCurve;
 }
 
@@ -95,27 +105,58 @@ int main(int argc, char **argv)
 
     std::cout << " number of components : " << objects.size() << endl; // Right now size of "objects" is the number of conected components
 
-    // Step 4
+
+
+
+
+
+    // ==================================== Step 4 ======================================
+
     // types definition
-    typedef std::vector<Point> Range;
-    typedef Range::const_iterator ConstIterator;
-    typedef StandardDSS4Computer<ConstIterator> SegmentComputer;
-    typedef GreedySegmentation<SegmentComputer> Segmentation;
+    trace.beginBlock ( "Example dgtalboard-5-greedy-dss" );
+ 
+    typedef FreemanChain<int> Contour4; 
+    typedef ArithmeticalDSSComputer<Contour4::ConstIterator,int,4> DSS4;
+    typedef GreedySegmentation<DSS4> Decomposition4;
+    
+    // A Freeman chain code is a string composed by the coordinates of the first pixel, and the list of elementary displacements. 
+    std::stringstream ss(stringstream::in | stringstream::out);
+    //ss << "624 465 330030003001001010111011111011111101111111111111111111121111111111111111111111111112111111111111112111111111121111111121111112111121112112212232323223323232332323232323232323232333333333333333303333333333333033333333333333333333303333333303333333333033330333303330333033030330303300" << endl;
 
-    auto curveFromBoundary = getBoundary<ObjectType>(digitalObj);
 
-    // Segmentation
-    SegmentComputer recognitionAlgorithm;
-    auto curveRange = curveFromBoundary.();
-    Segmentation theSegmentation(curveFromBoundary.begin(), curveFromBoundary.end(), recognitionAlgorithm);
 
-    Segmentation::SegmentComputerIterator i = theSegmentation.begin();
-    Segmentation::SegmentComputerIterator end = theSegmentation.end();
-    for (; i != end; ++i)
-    {
-        SegmentComputer current(*i);
-        trace.info() << current << std::endl; // standard output
+    auto curve = getBoundary(digitalObj);
+    std::cout << curve.getCodesRange() << std::endl;
+
+    for(auto it = curve.getCodesRange().begin(); it != curve.getCodesRange().end(); it++){
+
     }
+    
+    // Construct the Freeman chain
+    Contour4 theContour(ss);
+    
+    // Segmentation
+    Decomposition4 theDecomposition(theContour.begin(), theContour.end(), DSS4());
+    
+    
+    // Draw each segment
+    string styleName = "";
+    Board2D aBoard;
+    for ( Decomposition4::SegmentComputerIterator 
+            it = theDecomposition.begin(),
+            itEnd = theDecomposition.end();
+            it != itEnd; ++it ) 
+        {
+        aBoard << SetMode( "ArithmeticalDSS", "Points" )
+                << it->primitive(); 
+        aBoard << SetMode( "ArithmeticalDSS", "BoundingBox" )
+                << CustomStyle( "ArithmeticalDSS/BoundingBox", 
+                                new CustomPenColor( Color::Blue ) )
+                << it->primitive();
+        } 
+    
+    
+    aBoard.saveSVG("greedy-dss-decomposition.svg");
 
     return 0;
 }
