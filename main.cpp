@@ -10,11 +10,8 @@
 #include <DGtal/topology/helpers/Surfaces.h>
 #include "DGtal/io/Color.h"
 
-
 // Must add to have the greedy part to work
 #include "DGtal/geometry/curves/GreedySegmentation.h"
-
-
 
 using namespace std;
 using namespace DGtal;
@@ -60,9 +57,9 @@ Curve getBoundary(T &object)
 
     // 3) Create a curve from a vector
     Curve boundaryCurve;
-    std::vector<SCell> contour;                           //contour
+    std::vector<SCell> contour; // contour
 
-    //tracking and init grid curve
+    // tracking and init grid curve
     Surfaces<KSpace>::track2DBoundary(contour, kSpace, SAdj, set2d, aCell);
     boundaryCurve.initFromSCellsVector(contour);
     return boundaryCurve;
@@ -88,7 +85,7 @@ int main(int argc, char **argv)
     Image basmatiSeg = PGMReader<Image>::importPGM("../RiceGrains/Rice_basmati_seg_bin.pgm");
 
     // 1) make a "digital set" of proper size
-    Image img = basmatiSeg;
+    Image img = camargueSeg;
     Z2i::DigitalSet set2d(img.domain());
 
     // 2) populate a digital set from the image using SetFromImage::append()
@@ -105,58 +102,55 @@ int main(int argc, char **argv)
 
     std::cout << " number of components : " << objects.size() << endl; // Right now size of "objects" is the number of conected components
 
-
-
-
-
-
     // ==================================== Step 4 ======================================
 
     // types definition
-    trace.beginBlock ( "Example dgtalboard-5-greedy-dss" );
- 
-    typedef FreemanChain<int> Contour4; 
-    typedef ArithmeticalDSSComputer<Contour4::ConstIterator,int,4> DSS4;
+    trace.beginBlock("Greedy");
+
+    typedef FreemanChain<int> Contour4;
+    typedef ArithmeticalDSSComputer<Contour4::ConstIterator, int, 4> DSS4;
     typedef GreedySegmentation<DSS4> Decomposition4;
-    
-    // A Freeman chain code is a string composed by the coordinates of the first pixel, and the list of elementary displacements. 
+
+    // A Freeman chain code is a string composed by the coordinates of the first pixel, and the list of elementary displacements.
     std::stringstream ss(stringstream::in | stringstream::out);
-    //ss << "624 465 330030003001001010111011111011111101111111111111111111121111111111111111111111111112111111111111112111111111121111111121111112111121112112212232323223323232332323232323232323232333333333333333303333333333333033333333333333333333303333333303333333333033330333303330333033030330303300" << endl;
-
-
 
     auto curve = getBoundary(digitalObj);
-    std::cout << curve.getCodesRange() << std::endl;
 
-    for(auto it = curve.getCodesRange().begin(); it != curve.getCodesRange().end(); it++){
+    auto firstPointRange = *(curve.getPointsRange().begin());
 
+    ss << firstPointRange[0] << " " << firstPointRange[1] << " ";
+
+    for (auto it = curve.getCodesRange().begin(); it != curve.getCodesRange().end(); it++)
+    {
+        ss << *it;
     }
-    
+
+    ss << std::endl;
+    std::cout << ss.str() << std::endl;
+
     // Construct the Freeman chain
     Contour4 theContour(ss);
-    
+
     // Segmentation
     Decomposition4 theDecomposition(theContour.begin(), theContour.end(), DSS4());
-    
-    
+
     // Draw each segment
     string styleName = "";
     Board2D aBoard;
-    for ( Decomposition4::SegmentComputerIterator 
-            it = theDecomposition.begin(),
-            itEnd = theDecomposition.end();
-            it != itEnd; ++it ) 
-        {
-        aBoard << SetMode( "ArithmeticalDSS", "Points" )
-                << it->primitive(); 
-        aBoard << SetMode( "ArithmeticalDSS", "BoundingBox" )
-                << CustomStyle( "ArithmeticalDSS/BoundingBox", 
-                                new CustomPenColor( Color::Blue ) )
-                << it->primitive();
-        } 
-    
-    
-    aBoard.saveSVG("greedy-dss-decomposition.svg");
+    for (Decomposition4::SegmentComputerIterator
+             it = theDecomposition.begin(),
+             itEnd = theDecomposition.end();
+         it != itEnd; ++it)
+    {
+        aBoard << SetMode("ArithmeticalDSS", "Points")
+               << it->primitive();
+        aBoard << SetMode("ArithmeticalDSS", "BoundingBox")
+               << CustomStyle("ArithmeticalDSS/BoundingBox",
+                              new CustomPenColor(Color::Blue))
+               << it->primitive();
+    }
+
+    aBoard.saveSVG("greedyOut.svg", 600, 600, 10);
 
     return 0;
 }

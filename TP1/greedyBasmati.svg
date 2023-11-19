@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="600mm" height="600mm" 
+     viewBox="0 0 1700.79 1700.79" 
+     xmlns="http://www.w3.org/2000/svg" version="1.1" >
+<desc>output.svg, created with the Board library (Copyleft) 2007 Sebastien Fourey</desc>
+<polyline fill="none" stroke="rgb(0,0,0)" stroke-width="0.706mm" style="stroke-linecap:butt;stroke-linejoin:miter"
+          points="1303.15,1549.4 1303.15,1569.64 1323.4,1569.64 1343.65,1569.64 1343.65,1589.89 1363.9,1589.89 1363.9,1610.14
+                   1384.14,1610.14 1404.39,1610.14 1404.39,1630.39 1424.64,1630.39 1444.89,1630.39 1444.89,1650.64
+                   1465.14,1650.64 1485.38,1650.64" />
+<rect x="1293.03" y="1539.27" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1293.03" y="1559.52" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1313.28" y="1559.52" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1333.52" y="1559.52" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1333.52" y="1579.77" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1353.77" y="1579.77" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1353.77" y="1600.02" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1374.02" y="1600.02" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1394.27" y="1600.02" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1394.27" y="1620.26" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1414.52" y="1620.26" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1434.76" y="1620.26" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1434.76" y="1640.51" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1455.01" y="1640.51" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1475.26" y="1640.51" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<polygon fill="none" stroke="rgb(0,0,255)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter"
+          points="1304.4,1547.22 1291.94,1569.02 1472.92,1672.44 1485.38,1650.64" />
+<polyline fill="none" stroke="rgb(0,0,0)" stroke-width="0.706mm" style="stroke-linecap:butt;stroke-linejoin:miter"
+          points="1485.38,1650.64 1505.63,1650.64 1525.88,1650.64 1546.13,1650.64 1546.13,1630.39 1566.38,1630.39" />
+<rect x="1475.26" y="1640.51" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1495.51" y="1640.51" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1515.76" y="1640.51" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1536" y="1640.51" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1536" y="1620.26" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1556.25" y="1620.26" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<polygon fill="none" stroke="rgb(0,0,255)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter"
+          points="1485.38,1650.64 1491.46,1668.86 1570.42,1642.54 1564.35,1624.31" />
+<polyline fill="none" stroke="rgb(0,0,0)" stroke-width="0.706mm" style="stroke-linecap:butt;stroke-linejoin:miter"
+          points="1566.38,1630.39 1566.38,1610.14 1586.62,1610.14 1586.62,1589.89 1586.62,1569.64 1586.62,1549.4 1586.62,1529.15
+                   1586.62,1508.9 1586.62,1488.65 1586.62,1468.4 1586.62,1448.16" />
+<rect x="1556.25" y="1620.26" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1556.25" y="1600.02" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1576.5" y="1600.02" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1576.5" y="1579.77" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1576.5" y="1559.52" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1576.5" y="1539.27" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1576.5" y="1519.02" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1576.5" y="1498.78" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1576.5" y="1478.53" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1576.5" y="1458.28" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1576.5" y="1438.03" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<polygon fill="none" stroke="rgb(0,0,255)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter"
+          points="1563.88,1630.08 1583.82,1632.57 1606.56,1450.65 1586.62,1448.16" />
+<polyline fill="none" stroke="rgb(0,0,0)" stroke-width="0.706mm" style="stroke-linecap:butt;stroke-linejoin:miter"
+          points="1586.62,1448.16 1566.38,1448.16 1566.38,1427.91 1566.38,1407.66 1566.38,1387.41 1546.13,1387.41 1546.13,1367.16
+                   1546.13,1346.92 1546.13,1326.67 1546.13,1306.42" />
+<rect x="1576.5" y="1438.03" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1556.25" y="1438.03" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1556.25" y="1417.78" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1556.25" y="1397.54" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1556.25" y="1377.29" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1536" y="1377.29" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1536" y="1357.04" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1536" y="1336.79" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1536" y="1316.54" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1536" y="1296.3" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<polygon fill="none" stroke="rgb(0,0,255)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter"
+          points="1565.23,1454.27 1586.62,1448.16 1546.13,1306.42 1524.73,1312.53" />
+<polyline fill="none" stroke="rgb(0,0,0)" stroke-width="0.706mm" style="stroke-linecap:butt;stroke-linejoin:miter"
+          points="1546.13,1306.42 1546.13,1286.17 1546.13,1265.92 1546.13,1245.68 1525.88,1245.68 1525.88,1225.43 1525.88,1205.18
+                   1525.88,1184.93 1505.63,1184.93 1505.63,1164.68 1505.63,1144.44 1505.63,1124.19 1485.38,1124.19
+                   1485.38,1103.94 1485.38,1083.69 1465.14,1083.69 1465.14,1063.44" />
+<rect x="1536" y="1296.3" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1536" y="1276.05" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1536" y="1255.8" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1536" y="1235.55" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1515.76" y="1235.55" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1515.76" y="1215.3" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1515.76" y="1195.06" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1515.76" y="1174.81" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1495.51" y="1174.81" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1495.51" y="1154.56" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1495.51" y="1134.31" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1495.51" y="1114.06" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1475.26" y="1114.06" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1475.26" y="1093.82" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1475.26" y="1073.57" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1455.01" y="1073.57" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1455.01" y="1053.32" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<polygon fill="none" stroke="rgb(0,0,255)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter"
+          points="1546.13,1306.42 1568.89,1298.14 1481.39,1057.53 1458.63,1065.81" />
+<polyline fill="none" stroke="rgb(0,0,0)" stroke-width="0.706mm" style="stroke-linecap:butt;stroke-linejoin:miter"
+          points="1465.14,1063.44 1444.89,1063.44 1444.89,1043.2 1444.89,1022.95 1424.64,1022.95 1424.64,1002.7 1404.39,1002.7
+                   1404.39,982.45 1384.14,982.45 1384.14,962.2 1363.9,962.2 1363.9,941.96 1343.65,941.96
+                   1343.65,921.71 1323.4,921.71 1323.4,901.46 1303.15,901.46 1303.15,881.21 1282.9,881.21
+                   1282.9,860.96 1262.66,860.96 1262.66,840.72 1242.41,840.72 1242.41,820.47 1222.16,820.47
+                   1222.16,800.22 1201.91,800.22 1201.91,779.97 1181.66,779.97 1181.66,759.72 1161.42,759.72
+                   1161.42,739.48 1141.17,739.48 1141.17,719.23 1120.92,719.23 1120.92,698.98 1100.67,698.98
+                   1100.67,678.73 1100.67,658.48 1080.42,658.48 1080.42,638.24 1060.18,638.24" />
+<rect x="1455.01" y="1053.32" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1434.76" y="1053.32" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1434.76" y="1033.07" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1434.76" y="1012.82" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1414.52" y="1012.82" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1414.52" y="992.58" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1394.27" y="992.58" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1394.27" y="972.33" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1374.02" y="972.33" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1374.02" y="952.08" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1353.77" y="952.08" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1353.77" y="931.83" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1333.52" y="931.83" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1333.52" y="911.58" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1313.28" y="911.58" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1313.28" y="891.34" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1293.03" y="891.34" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1293.03" y="871.09" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1272.78" y="871.09" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1272.78" y="850.84" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1252.53" y="850.84" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1252.53" y="830.59" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1232.28" y="830.59" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1232.28" y="810.34" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1212.04" y="810.34" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1212.04" y="790.1" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1191.79" y="790.1" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1191.79" y="769.85" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1171.54" y="769.85" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1171.54" y="749.6" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1151.29" y="749.6" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1151.29" y="729.35" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1131.04" y="729.35" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1131.04" y="709.1" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1110.8" y="709.1" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1110.8" y="688.86" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1090.55" y="688.86" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1090.55" y="668.61" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1090.55" y="648.36" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1070.3" y="648.36" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1070.3" y="628.11" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1050.05" y="628.11" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<polygon fill="none" stroke="rgb(0,0,255)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter"
+          points="1454.43,1073.55 1474.65,1054.46 1071.47,627.57 1051.26,646.66" />
+<polyline fill="none" stroke="rgb(0,0,0)" stroke-width="0.706mm" style="stroke-linecap:butt;stroke-linejoin:miter"
+          points="1060.18,638.24 1039.93,638.24 1039.93,617.99 1019.68,617.99 1019.68,597.74 999.43,597.74 999.43,577.49
+                   979.18,577.49 979.18,557.24 958.94,557.24 958.94,537 938.69,537 938.69,516.75
+                   918.44,516.75 918.44,496.5 898.19,496.5 898.19,476.25 877.94,476.25 877.94,456
+                   857.7,456 857.7,435.76 837.45,435.76 837.45,415.51 817.2,415.51 817.2,395.26
+                   796.95,395.26 796.95,375.01 776.7,375.01 776.7,354.76 756.46,354.76 756.46,334.52
+                   736.21,334.52 736.21,314.27 715.96,314.27 715.96,294.02 695.71,294.02 695.71,273.77
+                   675.46,273.77 675.46,253.52 655.22,253.52 655.22,233.28 634.97,233.28 634.97,213.03
+                   614.72,213.03 594.47,213.03 594.47,192.78 574.22,192.78 574.22,172.53 553.98,172.53
+                  " />
+<rect x="1050.05" y="628.11" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1029.8" y="628.11" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1029.8" y="607.86" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1009.56" y="607.86" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1009.56" y="587.62" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="989.31" y="587.62" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="989.31" y="567.37" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="969.06" y="567.37" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="969.06" y="547.12" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="948.81" y="547.12" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="948.81" y="526.87" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="928.56" y="526.87" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="928.56" y="506.62" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="908.32" y="506.62" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="908.32" y="486.38" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="888.07" y="486.38" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="888.07" y="466.13" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="867.82" y="466.13" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="867.82" y="445.88" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="847.57" y="445.88" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="847.57" y="425.63" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="827.32" y="425.63" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="827.32" y="405.38" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="807.08" y="405.38" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="807.08" y="385.14" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="786.83" y="385.14" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="786.83" y="364.89" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="766.58" y="364.89" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="766.58" y="344.64" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="746.33" y="344.64" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="746.33" y="324.39" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="726.08" y="324.39" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="726.08" y="304.14" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="705.84" y="304.14" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="705.84" y="283.9" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="685.59" y="283.9" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="685.59" y="263.65" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="665.34" y="263.65" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="665.34" y="243.4" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="645.09" y="243.4" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="645.09" y="223.15" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="624.84" y="223.15" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="624.84" y="202.9" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="604.6" y="202.9" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="584.35" y="202.9" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="584.35" y="182.66" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="564.1" y="182.66" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="564.1" y="162.41" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="543.85" y="162.41" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<polygon fill="none" stroke="rgb(0,0,255)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter"
+          points="1050.52,648.35 1069.83,628.12 572.36,153.27 553.06,173.5" />
+<polyline fill="none" stroke="rgb(0,0,0)" stroke-width="0.706mm" style="stroke-linecap:butt;stroke-linejoin:miter"
+          points="553.98,172.53 533.73,172.53 533.73,152.28 513.48,152.28 513.48,132.04 493.23,132.04 472.98,132.04
+                   472.98,111.79 452.74,111.79 432.49,111.79 432.49,91.54 412.24,91.54 391.99,91.54
+                   391.99,71.29 371.74,71.29 351.5,71.29 351.5,51.04 331.25,51.04 311,51.04
+                  " />
+<rect x="543.85" y="162.41" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="523.6" y="162.41" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="523.6" y="142.16" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="503.36" y="142.16" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="503.36" y="121.91" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="483.11" y="121.91" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="462.86" y="121.91" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="462.86" y="101.66" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="442.61" y="101.66" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="422.36" y="101.66" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="422.36" y="81.42" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="402.12" y="81.42" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="381.87" y="81.42" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="381.87" y="61.17" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="361.62" y="61.17" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="341.37" y="61.17" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="341.37" y="40.92" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="321.12" y="40.92" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="300.88" y="40.92" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<polygon fill="none" stroke="rgb(0,0,255)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter"
+          points="549.33,181.04 561.71,158.35 323.38,28.35 311,51.04" />
+<polyline fill="none" stroke="rgb(0,0,0)" stroke-width="0.706mm" style="stroke-linecap:butt;stroke-linejoin:miter"
+          points="311,51.04 290.75,51.04 270.5,51.04 250.26,51.04 230.01,51.04 209.76,51.04 189.51,51.04
+                   169.26,51.04 169.26,71.29 149.02,71.29" />
+<rect x="300.88" y="40.92" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="280.63" y="40.92" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="260.38" y="40.92" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="240.13" y="40.92" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="219.88" y="40.92" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="199.64" y="40.92" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="179.39" y="40.92" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="159.14" y="40.92" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="159.14" y="61.17" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="138.89" y="61.17" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<polygon fill="none" stroke="rgb(0,0,255)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter"
+          points="311,51.04 308.17,31.2 146.59,54.28 149.42,74.13" />
+<polyline fill="none" stroke="rgb(0,0,0)" stroke-width="0.706mm" style="stroke-linecap:butt;stroke-linejoin:miter"
+          points="149.02,71.29 149.02,91.54 149.02,111.79 128.77,111.79 128.77,132.04 128.77,152.28 128.77,172.53
+                   128.77,192.78 108.52,192.78 108.52,213.03 108.52,233.28 108.52,253.52" />
+<rect x="138.89" y="61.17" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="138.89" y="81.42" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="138.89" y="101.66" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="118.64" y="101.66" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="118.64" y="121.91" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="118.64" y="142.16" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="118.64" y="162.41" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="118.64" y="182.66" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="98.4" y="182.66" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="98.4" y="202.9" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="98.4" y="223.15" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="98.4" y="243.4" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<polygon fill="none" stroke="rgb(0,0,255)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter"
+          points="158.54,73.67 139.49,68.91 94.23,249.95 113.28,254.72" />
+<polyline fill="none" stroke="rgb(0,0,0)" stroke-width="0.706mm" style="stroke-linecap:butt;stroke-linejoin:miter"
+          points="108.52,253.52 128.77,253.52 128.77,273.77 128.77,294.02 128.77,314.27 128.77,334.52 149.02,334.52
+                   149.02,354.76 149.02,375.01" />
+<rect x="98.4" y="243.4" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="118.64" y="243.4" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="118.64" y="263.65" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="118.64" y="283.9" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="118.64" y="304.14" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="118.64" y="324.39" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="138.89" y="324.39" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="138.89" y="344.64" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="138.89" y="364.89" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<polygon fill="none" stroke="rgb(0,0,255)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter"
+          points="127.58,248.76 108.52,253.52 139.49,377.39 158.54,372.63" />
+<polyline fill="none" stroke="rgb(0,0,0)" stroke-width="0.706mm" style="stroke-linecap:butt;stroke-linejoin:miter"
+          points="149.02,375.01 169.26,375.01 169.26,395.26 169.26,415.51 189.51,415.51 189.51,435.76 209.76,435.76
+                   209.76,456 209.76,476.25 230.01,476.25 230.01,496.5 250.26,496.5 250.26,516.75
+                   270.5,516.75 270.5,537" />
+<rect x="138.89" y="364.89" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="159.14" y="364.89" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="159.14" y="385.14" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="159.14" y="405.38" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="179.39" y="405.38" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="179.39" y="425.63" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="199.64" y="425.63" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="199.64" y="445.88" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="199.64" y="466.13" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="219.88" y="466.13" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="219.88" y="486.38" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="240.13" y="486.38" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="240.13" y="506.62" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="260.38" y="506.62" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="260.38" y="526.87" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<polygon fill="none" stroke="rgb(0,0,255)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter"
+          points="162.42,365.44 141.36,380.48 259.01,545.21 280.08,530.16" />
+<polyline fill="none" stroke="rgb(0,0,0)" stroke-width="0.706mm" style="stroke-linecap:butt;stroke-linejoin:miter"
+          points="270.5,537 290.75,537 290.75,557.24 290.75,577.49 311,577.49 311,597.74 331.25,597.74
+                   331.25,617.99 351.5,617.99 351.5,638.24 371.74,638.24 371.74,658.48 371.74,678.73
+                   391.99,678.73 391.99,698.98 412.24,698.98 412.24,719.23 432.49,719.23 432.49,739.48
+                   452.74,739.48 452.74,759.72 472.98,759.72 472.98,779.97" />
+<rect x="260.38" y="526.87" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="280.63" y="526.87" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="280.63" y="547.12" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="280.63" y="567.37" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="300.88" y="567.37" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="300.88" y="587.62" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="321.12" y="587.62" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="321.12" y="607.86" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="341.37" y="607.86" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="341.37" y="628.11" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="361.62" y="628.11" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="361.62" y="648.36" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="361.62" y="668.61" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="381.87" y="668.61" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="381.87" y="688.86" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="402.12" y="688.86" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="402.12" y="709.1" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="422.36" y="709.1" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="422.36" y="729.35" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="442.61" y="729.35" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="442.61" y="749.6" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="462.86" y="749.6" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="462.86" y="769.85" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<polygon fill="none" stroke="rgb(0,0,255)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter"
+          points="282.63,527.07 261.68,544.21 461.96,788.99 482.91,771.85" />
+<polyline fill="none" stroke="rgb(0,0,0)" stroke-width="0.706mm" style="stroke-linecap:butt;stroke-linejoin:miter"
+          points="472.98,779.97 493.23,779.97 493.23,800.22 513.48,800.22 513.48,820.47 533.73,820.47 533.73,840.72
+                   533.73,860.96 553.98,860.96 553.98,881.21 574.22,881.21 574.22,901.46 594.47,901.46
+                   594.47,921.71 614.72,921.71 614.72,941.96 634.97,941.96 634.97,962.2 655.22,962.2
+                   655.22,982.45 675.46,982.45 675.46,1002.7 695.71,1002.7 695.71,1022.95 715.96,1022.95
+                   715.96,1043.2 736.21,1043.2 736.21,1063.44 756.46,1063.44 756.46,1083.69 776.7,1083.69
+                   776.7,1103.94 796.95,1103.94 796.95,1124.19 817.2,1124.19 817.2,1144.44 837.45,1144.44
+                   837.45,1164.68 857.7,1164.68 857.7,1184.93 877.94,1184.93 877.94,1205.18 898.19,1205.18
+                   898.19,1225.43 918.44,1225.43 918.44,1245.68 938.69,1245.68 938.69,1265.92 958.94,1265.92
+                   958.94,1286.17 979.18,1286.17 979.18,1306.42 999.43,1306.42 999.43,1326.67 1019.68,1326.67
+                   1019.68,1346.92 1039.93,1346.92 1039.93,1367.16 1060.18,1367.16 1060.18,1387.41 1080.42,1387.41
+                  " />
+<rect x="462.86" y="769.85" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="483.11" y="769.85" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="483.11" y="790.1" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="503.36" y="790.1" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="503.36" y="810.34" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="523.6" y="810.34" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="523.6" y="830.59" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="523.6" y="850.84" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="543.85" y="850.84" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="543.85" y="871.09" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="564.1" y="871.09" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="564.1" y="891.34" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="584.35" y="891.34" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="584.35" y="911.58" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="604.6" y="911.58" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="604.6" y="931.83" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="624.84" y="931.83" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="624.84" y="952.08" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="645.09" y="952.08" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="645.09" y="972.33" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="665.34" y="972.33" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="665.34" y="992.58" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="685.59" y="992.58" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="685.59" y="1012.82" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="705.84" y="1012.82" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="705.84" y="1033.07" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="726.08" y="1033.07" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="726.08" y="1053.32" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="746.33" y="1053.32" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="746.33" y="1073.57" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="766.58" y="1073.57" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="766.58" y="1093.82" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="786.83" y="1093.82" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="786.83" y="1114.06" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="807.08" y="1114.06" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="807.08" y="1134.31" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="827.32" y="1134.31" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="827.32" y="1154.56" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="847.57" y="1154.56" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="847.57" y="1174.81" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="867.82" y="1174.81" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="867.82" y="1195.06" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="888.07" y="1195.06" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="888.07" y="1215.3" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="908.32" y="1215.3" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="908.32" y="1235.55" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="928.56" y="1235.55" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="928.56" y="1255.8" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="948.81" y="1255.8" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="948.81" y="1276.05" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="969.06" y="1276.05" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="969.06" y="1296.3" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="989.31" y="1296.3" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="989.31" y="1316.54" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1009.56" y="1316.54" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1009.56" y="1336.79" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1029.8" y="1336.79" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1029.8" y="1357.04" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1050.05" y="1357.04" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1050.05" y="1377.29" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1070.3" y="1377.29" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<polygon fill="none" stroke="rgb(0,0,255)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter"
+          points="484.23,769.13 463.99,788.64 1060.19,1406.92 1080.42,1387.41" />
+<polyline fill="none" stroke="rgb(0,0,0)" stroke-width="0.706mm" style="stroke-linecap:butt;stroke-linejoin:miter"
+          points="1080.42,1387.41 1100.67,1387.41 1100.67,1407.66 1120.92,1407.66 1120.92,1427.91 1141.17,1427.91 1141.17,1448.16
+                   1161.42,1448.16 1161.42,1468.4 1181.66,1468.4 1201.91,1468.4 1201.91,1488.65 1222.16,1488.65
+                   1222.16,1508.9 1242.41,1508.9 1242.41,1529.15 1262.66,1529.15 1262.66,1549.4 1282.9,1549.4
+                   1303.15,1549.4" />
+<rect x="1070.3" y="1377.29" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1090.55" y="1377.29" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1090.55" y="1397.54" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1110.8" y="1397.54" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1110.8" y="1417.78" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1131.04" y="1417.78" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1131.04" y="1438.03" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1151.29" y="1438.03" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1151.29" y="1458.28" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1171.54" y="1458.28" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1191.79" y="1458.28" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1191.79" y="1478.53" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1212.04" y="1478.53" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1212.04" y="1498.78" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1232.28" y="1498.78" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1232.28" y="1519.02" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1252.53" y="1519.02" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1252.53" y="1539.27" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1272.78" y="1539.27" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<rect x="1293.03" y="1539.27" width="20.25" height="20.25" fill="rgb(220,220,220)" stroke="rgb(160,160,160)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter" />
+<polygon fill="none" stroke="rgb(0,0,255)" stroke-width="0.353mm" style="stroke-linecap:butt;stroke-linejoin:miter"
+          points="1088.33,1377.53 1072.52,1397.29 1287.35,1569.15 1303.15,1549.4" />
+</svg>

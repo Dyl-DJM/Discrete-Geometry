@@ -18,6 +18,7 @@ The Camargue rice grains seems more rounded, less long than the Basmati ones.
 Japanese grains are even more rounded, if the Camargue grains have still an oval shape, here it looks like circles.
 
 
+--------------
 
 ### STEP 2: COUNT GRAINS
 
@@ -49,6 +50,9 @@ By inverting the current pair of addjency (4 foreground - 8 background) to (8 fo
 The one with the biggest gap is Basmatin then Camargue and Japanese.
 
 
+--------------
+
+
 ### STEP 3: EXTRACT DIGITAL OBJECT BOUNDARY
 
 
@@ -68,4 +72,35 @@ By applying my getBoundary() function on the different segmented images, I could
 **Basmati**
 
 ![Basmati boundary result](BoundaryBasmati.svg "Basmati Boundary result")
+
+
+
+### Step 4 : POLYGONIZE DIGITAL OBJECT BOUNDARY
+
+
+**Japanese**
+
+![Japanese Greedy result](greedyJapanese.svg "Japanese Greedy result")
+
+*Freeman Chain :* 1292 1112 30303033033033030300001001010010110101011011010110110110111011111011111011111111011111111111211111211212112121212212122222222222222232232232323232323232332332332333233323333233333323333333333303030030303030303030330330
+
+---------------
+**Camargue**
+![Camargue Greedy result](greedyCamargue.svg "Camargue Greedy result")
+
+*Freeman Chain :* 974 270 3000300300030003000300000030000000300000001000010000100101001010101011011011111111112121212122121221221221221212212122122122122122122122122212212221221222122212212212221222122221222221222222222222322232332333333033303030303030330303333330330333303333033030300300300300300030030000
+
+---------------
+**Basmati**
+
+![Basmati Greedy result](greedyBasmati.svg "Basmati Greedy result")
+
+*Freeman Chain :* 864 1116 3003030030030000010101111111121112111111121112111211212112121212121212121212121212121212121121221212121212121212121212121212121212121212122121221212212212212212222222223233233332333033330330330303303030303303030303303030303030303033030303030303030303030303030303030303030303030303030300303030300303030300
+
+
+
+
+--------------
+
+
 
