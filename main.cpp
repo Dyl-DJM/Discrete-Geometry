@@ -85,7 +85,7 @@ int main(int argc, char **argv)
     Image basmatiSeg = PGMReader<Image>::importPGM("../RiceGrains/Rice_basmati_seg_bin.pgm");
 
     // 1) make a "digital set" of proper size
-    Image img = camargueSeg;
+    Image img = basmatiSeg;
     Z2i::DigitalSet set2d(img.domain());
 
     // 2) populate a digital set from the image using SetFromImage::append()
@@ -114,12 +114,14 @@ int main(int argc, char **argv)
     // A Freeman chain code is a string composed by the coordinates of the first pixel, and the list of elementary displacements.
     std::stringstream ss(stringstream::in | stringstream::out);
 
+    // Get the boundary cruve
     auto curve = getBoundary(digitalObj);
 
+    // Get the first Point range and put it in the freeman chain
     auto firstPointRange = *(curve.getPointsRange().begin());
-
     ss << firstPointRange[0] << " " << firstPointRange[1] << " ";
 
+    // Then each code must appear in the freeman chain
     for (auto it = curve.getCodesRange().begin(); it != curve.getCodesRange().end(); it++)
     {
         ss << *it;
@@ -130,6 +132,25 @@ int main(int argc, char **argv)
 
     // Construct the Freeman chain
     Contour4 theContour(ss);
+
+    // == Draw line Version ==
+
+    Board2D aBoardLine;
+
+    // displaying contour
+    aBoardLine << SetMode((*(theContour.begin())).className(), "Grid");
+
+    // TODO : À remplacer pour que ça match avec les itérateurs
+    for (unsigned int i = 0; i < theContour.size(); i++)
+    {
+        auto firstP = theContour.getPoint(i);
+        auto secondP = theContour.getPoint((i + 1) % theContour.size());
+        aBoardLine << firstP;
+        aBoardLine.drawLine(firstP[0], firstP[1],
+                            secondP[0], secondP[1]);
+    }
+
+    // == Other way (got from the example) ==
 
     // Segmentation
     Decomposition4 theDecomposition(theContour.begin(), theContour.end(), DSS4());
@@ -151,6 +172,9 @@ int main(int argc, char **argv)
     }
 
     aBoard.saveSVG("greedyOut.svg", 600, 600, 10);
+    aBoardLine.saveSVG("greedyOutLineVersion.svg", 600, 600, 10);
+
+    // ==================================== Step 5 ======================================
 
     return 0;
 }
