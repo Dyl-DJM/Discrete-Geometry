@@ -176,5 +176,8 @@ int main(int argc, char **argv)
 
     // ==================================== Step 5 ======================================
 
+    auto areaGridPoints = digitalObj.size();
+
+    std::cout << areaGridPoints << std::endl;
     return 0;
 }
