@@ -180,3 +180,11 @@ Shoelace computation for the following points :
 (1048, 1199)
 Area Version Polygon Shape (UL) : 282165
 ```
+
+
+
+............ (iF THE GRID IS je sais plus quoi)
+
+
+### Step 6 : CALCULATE PERIMETER
+

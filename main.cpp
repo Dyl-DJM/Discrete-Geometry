@@ -120,13 +120,13 @@ float applyShoelace(const Decomposition4& decomposition, const char* filename, c
 
         auto nextPoint = firstPoint;
         if(it != itEnd){
-            auto nextPoint = it->primitive().Uf();
+            nextPoint = it->primitive().Uf();
             if(modeCode == 0){
                 nextPoint = it->primitive().Ul();
             }
         }
 
-        std::cout << point << std::endl;
+        std::cout << point << " <=> " << nextPoint << std::endl;
         
         x1 = point[0];
         y1 = point[1];
@@ -174,7 +174,7 @@ int main(int argc, char **argv)
     // 4) Set the adjacency pair and obtain the connected components using "writeComponents"
     unsigned int nbc = digitalObj.writeComponents(inserter);
 
-    std::cout << " number of components : " << objects.size() << endl; // Right now size of "objects" is the number of conected components
+    std::cout << " number of components : " << objects.size() << endl; // Right now size of "objects" is the number of connected components
 
     // ==================================== Step 4 ======================================
 
@@ -186,7 +186,7 @@ int main(int argc, char **argv)
     std::stringstream ss(stringstream::in | stringstream::out);
 
     // Get the boundary cruve
-    auto curve = getBoundary(digitalObj);
+    auto curve = getBoundary(objects[57]);
 
     // Get the first Point range and put it in the freeman chain
     auto firstPointRange = *(curve.getPointsRange().begin());
@@ -248,7 +248,7 @@ int main(int argc, char **argv)
 
     // ==================================== Step 5 ======================================
 
-    auto areaGridPoints = digitalObj.size();
+    auto areaGridPoints = objects[57].size();
 
     std::cout << "Area Version Grid Points : " << areaGridPoints << std::endl;
 
@@ -260,6 +260,16 @@ int main(int argc, char **argv)
 
     auto areaPolygonUL = applyShoelace(theDecomposition, "Shoelace_UL", "UL");
     std::cout << "Area Version Polygon Shape (UL) : " << areaPolygonUL << std::endl;
+
+
+
+    // ==================================== Step 6 ======================================
+
+    auto perimeterFromBoundary = 0;
+    std::cout << "Perimeter : " << perimeterFromBoundary << std::endl;
+
+
+
 
     return 0;
 }
