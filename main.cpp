@@ -181,8 +181,16 @@ int main(int argc, char **argv)
 
     std::cout << "Area Version Grid Points : " << areaGridPoints << std::endl;
 
-    // DSS 
-    StandardDSS4<Integer> segment(curve.getPointsRange().begin(), curve.getPointsRange().end());
+
+    // Shoelace Computation
+
+    for (auto  it = theDecomposition.begin(), itEnd = theDecomposition.end();
+         it != itEnd; ++it)
+    {
+       std::cout << "Point ? " << it->primitive().Uf() << std::endl;
+    }
+
+    
 
 
     return 0;
