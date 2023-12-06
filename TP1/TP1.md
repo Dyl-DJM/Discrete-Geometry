@@ -125,3 +125,58 @@ DrawLine() version :
 ### Step 5 : CALCULATE AREA
 
 
+
+#### Question 1)
+
+As it is said that the amount of 2-cells in a digital object is equal to its number of cells, we can find the value by calling its size() method.
+
+I got the following area : ...
+
+
+#### Question 2)
+
+As I searched for a way to retrieve information about the rectangle shapes of the DSS, I found two methods that retrieved the leaning points of a Primitive object : Uf() and Ul().
+
+I iterated over the DSS and printed the points I got with these methods to obtain the following results.
+
+UF : 
+![Test UF method](Test_UF.svg "Test UF method")
+
+
+UL :
+
+![Test UL method](Test_UL.svg "Test UL method")
+
+
+
+BY running my programm, I got the following statement :
+
+```
+Shoelace computation for the following points : 
+(992, 1200)
+(998, 1187)
+(998, 1183)
+(1000, 1178)
+(1008, 1174)
+(1026, 1170)
+(1041, 1172)
+(1047, 1175)
+(1051, 1182)
+(1052, 1191)
+(1048, 1199)
+Area Version Polygon Shape (UF) : 303144
+
+Shoelace computation for the following points : 
+(995, 1195)
+(998, 1187)
+(999, 1179)
+(1007, 1174)
+(1026, 1170)
+(1038, 1171)
+(1046, 1174)
+(1050, 1179)
+(1053, 1189)
+(1049, 1198)
+(1048, 1199)
+Area Version Polygon Shape (UL) : 282165
+```

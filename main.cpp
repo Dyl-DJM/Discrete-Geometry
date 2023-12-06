@@ -13,9 +13,20 @@
 // Must add to have the greedy part to work
 #include "DGtal/geometry/curves/GreedySegmentation.h"
 
+#include <string>
+
 using namespace std;
 using namespace DGtal;
 using namespace Z2i;
+
+
+// STEP 4 and more
+typedef FreemanChain<int> Contour4;
+typedef ArithmeticalDSSComputer<Contour4::ConstIterator, int, 4> DSS4;
+typedef GreedySegmentation<DSS4> Decomposition4;
+
+
+
 
 template <class T>
 void sendToBoard(Board2D &board, T &p_Object, DGtal::Color p_Color);
@@ -72,6 +83,69 @@ void sendToBoard(Board2D &board, T &p_Object, DGtal::Color p_Color)
     board << p_Object;
 }
 
+
+
+
+float applyShoelace(const Decomposition4& decomposition, const char* filename, const char* mode){
+    Board2D aBoard;
+
+    float sum = 0;
+    int modeCode = strcmp(mode, "UF") == 0 ? 1 : (strcmp(mode, "UL") == 0 ?  0 : -1);
+
+    if(modeCode == -1){
+        std::cerr << "Invalid argument mode shloud either be 'UF' or 'UL'" << std::endl;
+        return -1;
+    }
+
+    int x1, y1, x2, y2;
+
+    auto firstPoint = decomposition.begin()->primitive().Uf();
+    if(modeCode == 0){
+        firstPoint = decomposition.begin()->primitive().Ul();
+    }
+
+    std::cout << std::endl << "Shoelace computation for the following points : " << std::endl;
+
+    for (auto  it = decomposition.begin(), itEnd = decomposition.end();
+            it != itEnd; )
+    {
+
+        auto point = it->primitive().Uf();
+
+        if(modeCode == 0){
+            point = it->primitive().Ul();
+        }
+
+        ++it;
+
+        auto nextPoint = firstPoint;
+        if(it != itEnd){
+            auto nextPoint = it->primitive().Uf();
+            if(modeCode == 0){
+                nextPoint = it->primitive().Ul();
+            }
+        }
+
+        std::cout << point << std::endl;
+        
+        x1 = point[0];
+        y1 = point[1];
+        x2 = nextPoint[0];
+        y2 = nextPoint[1];
+
+        sum += (x1 * y2) - (y1 * x2);
+
+        aBoard << point;
+    }
+    auto shoelaceRes = 0.5 * abs(sum);
+    aBoard.saveSVG(filename, 600, 600, 10);
+
+    return shoelaceRes;
+}
+
+
+
+
 int main(int argc, char **argv)
 {
     setlocale(LC_NUMERIC, "us_US");                                            // To prevent French local settings
@@ -107,9 +181,6 @@ int main(int argc, char **argv)
     // types definition
     trace.beginBlock("Greedy");
 
-    typedef FreemanChain<int> Contour4;
-    typedef ArithmeticalDSSComputer<Contour4::ConstIterator, int, 4> DSS4;
-    typedef GreedySegmentation<DSS4> Decomposition4;
 
     // A Freeman chain code is a string composed by the coordinates of the first pixel, and the list of elementary displacements.
     std::stringstream ss(stringstream::in | stringstream::out);
@@ -184,14 +255,11 @@ int main(int argc, char **argv)
 
     // Shoelace Computation
 
-    for (auto  it = theDecomposition.begin(), itEnd = theDecomposition.end();
-         it != itEnd; ++it)
-    {
-       std::cout << "Point ? " << it->primitive().Uf() << std::endl;
-    }
+    auto areaPolygonUF = applyShoelace(theDecomposition, "Shoelace_UF", "UF");
+    std::cout << "Area Version Polygon Shape (UF) : " << areaPolygonUF << std::endl;
 
-    
-
+    auto areaPolygonUL = applyShoelace(theDecomposition, "Shoelace_UL", "UL");
+    std::cout << "Area Version Polygon Shape (UL) : " << areaPolygonUL << std::endl;
 
     return 0;
 }
