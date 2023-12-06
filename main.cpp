@@ -85,7 +85,7 @@ int main(int argc, char **argv)
     Image basmatiSeg = PGMReader<Image>::importPGM("../RiceGrains/Rice_basmati_seg_bin.pgm");
 
     // 1) make a "digital set" of proper size
-    Image img = basmatiSeg;
+    Image img = japSeg;
     Z2i::DigitalSet set2d(img.domain());
 
     // 2) populate a digital set from the image using SetFromImage::append()
@@ -129,6 +129,7 @@ int main(int argc, char **argv)
 
     ss << std::endl;
     std::cout << ss.str() << std::endl;
+
 
     // Construct the Freeman chain
     Contour4 theContour(ss);
@@ -178,6 +179,11 @@ int main(int argc, char **argv)
 
     auto areaGridPoints = digitalObj.size();
 
-    std::cout << areaGridPoints << std::endl;
+    std::cout << "Area Version Grid Points : " << areaGridPoints << std::endl;
+
+    // DSS 
+    StandardDSS4<Integer> segment(curve.getPointsRange().begin(), curve.getPointsRange().end());
+
+
     return 0;
 }
