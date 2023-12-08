@@ -14,6 +14,7 @@
 #include "DGtal/geometry/curves/GreedySegmentation.h"
 
 #include <string>
+#include <math.h>
 
 using namespace std;
 using namespace DGtal;
@@ -25,7 +26,16 @@ typedef FreemanChain<int> Contour4;
 typedef ArithmeticalDSSComputer<Contour4::ConstIterator, int, 4> DSS4;
 typedef GreedySegmentation<DSS4> Decomposition4;
 
+struct PointTuple{
 
+    PointTuple(int x, int y)
+    : _x{x}, _y{y}
+    {
+    }
+
+    int _x;
+    int _y;
+};
 
 
 template <class T>
@@ -86,61 +96,67 @@ void sendToBoard(Board2D &board, T &p_Object, DGtal::Color p_Color)
 
 
 
-float applyShoelace(const Decomposition4& decomposition, const char* filename, const char* mode){
-    Board2D aBoard;
+float applyShoelace(const std::vector<PointTuple>& points){
 
     float sum = 0;
-    int modeCode = strcmp(mode, "UF") == 0 ? 1 : (strcmp(mode, "UL") == 0 ?  0 : -1);
-
-    if(modeCode == -1){
-        std::cerr << "Invalid argument mode shloud either be 'UF' or 'UL'" << std::endl;
-        return -1;
-    }
-
     int x1, y1, x2, y2;
 
-    auto firstPoint = decomposition.begin()->primitive().Uf();
-    if(modeCode == 0){
-        firstPoint = decomposition.begin()->primitive().Ul();
-    }
+    auto firstPoint = points[0]; 
 
-    std::cout << std::endl << "Shoelace computation for the following points : " << std::endl;
-
-    for (auto  it = decomposition.begin(), itEnd = decomposition.end();
-            it != itEnd; )
+    for (int i = 0; i < points.size(); i++)
     {
-
-        auto point = it->primitive().Uf();
-
-        if(modeCode == 0){
-            point = it->primitive().Ul();
-        }
-
-        ++it;
-
+        auto point = points[i];
         auto nextPoint = firstPoint;
-        if(it != itEnd){
-            nextPoint = it->primitive().Uf();
-            if(modeCode == 0){
-                nextPoint = it->primitive().Ul();
-            }
-        }
 
-        std::cout << point << " <=> " << nextPoint << std::endl;
+        if(i < points.size() - 1){
+            nextPoint = points[i + 1];
+        }
         
-        x1 = point[0];
-        y1 = point[1];
-        x2 = nextPoint[0];
-        y2 = nextPoint[1];
+        x1 = point._x;
+        y1 = point._y;
+        x2 = nextPoint._x;
+        y2 = nextPoint._y;
 
         sum += (x1 * y2) - (y1 * x2);
-
-        aBoard << point;
     }
-    auto shoelaceRes = 0.5 * abs(sum);
-    aBoard.saveSVG(filename, 600, 600, 10);
 
+    auto shoelaceRes = 0.5 * abs(sum);
     return shoelaceRes;
+}
+
+
+
+
+double euclideanDist(double x1, double y1, double x2, double y2){
+    return sqrt(pow(x2 - x1, 2) + (pow(y2 - y1, 2)));
+}
+
+
+
+double getPerimeter(const std::vector<PointTuple>& points){
+
+    double sum = 0;
+    int x1, y1, x2, y2;
+
+    auto firstPoint = points[0]; 
+
+    for (int i = 0; i < points.size(); i++)
+    {
+        auto point = points[i];
+        auto nextPoint = firstPoint;
+
+        if(i < points.size() - 1){
+            nextPoint = points[i + 1];
+        }
+        
+        x1 = point._x;
+        y1 = point._y;
+        x2 = nextPoint._x;
+        y2 = nextPoint._y;
+
+        sum += euclideanDist(x1, y1, x2, y2);
+    }
+    return sum;
 }
 
 
@@ -186,7 +202,7 @@ int main(int argc, char **argv)
     std::stringstream ss(stringstream::in | stringstream::out);
 
     // Get the boundary cruve
-    auto curve = getBoundary(objects[57]);
+    auto curve = getBoundary(objects[113]);
 
     // Get the first Point range and put it in the freeman chain
     auto firstPointRange = *(curve.getPointsRange().begin());
@@ -199,8 +215,6 @@ int main(int argc, char **argv)
     }
 
     ss << std::endl;
-    std::cout << ss.str() << std::endl;
-
 
     // Construct the Freeman chain
     Contour4 theContour(ss);
@@ -248,27 +262,33 @@ int main(int argc, char **argv)
 
     // ==================================== Step 5 ======================================
 
-    auto areaGridPoints = objects[57].size();
+    auto areaGridPoints = objects[113].size();
 
     std::cout << "Area Version Grid Points : " << areaGridPoints << std::endl;
 
 
     // Shoelace Computation
+    std::vector<PointTuple> polygonPoints;
 
-    auto areaPolygonUF = applyShoelace(theDecomposition, "Shoelace_UF", "UF");
-    std::cout << "Area Version Polygon Shape (UF) : " << areaPolygonUF << std::endl;
+    for(auto &segment : theDecomposition){
+        auto x = (*(segment.begin()))[0];
+        auto y = (*(segment.begin()))[1];
+        polygonPoints.push_back(PointTuple(x, y));
+    }
+    
 
-    auto areaPolygonUL = applyShoelace(theDecomposition, "Shoelace_UL", "UL");
-    std::cout << "Area Version Polygon Shape (UL) : " << areaPolygonUL << std::endl;
-
+    auto areaPolygon = applyShoelace(polygonPoints);
+    std::cout << "Area Version Polygon Shape (UF) : " << areaPolygon << std::endl;
 
 
     // ==================================== Step 6 ======================================
 
-    auto perimeterFromBoundary = 0;
+    auto perimeterFromBoundary = curve.size();
     std::cout << "Perimeter : " << perimeterFromBoundary << std::endl;
 
 
+    auto perimeterFormula = getPerimeter(polygonPoints);
+    std::cout << "Perimeter (Polygon) UF: " << perimeterFormula << std::endl;
 
 
     return 0;
