@@ -20,23 +20,22 @@ using namespace std;
 using namespace DGtal;
 using namespace Z2i;
 
-
 // STEP 4 and more
 typedef FreemanChain<int> Contour4;
 typedef ArithmeticalDSSComputer<Contour4::ConstIterator, int, 4> DSS4;
 typedef GreedySegmentation<DSS4> Decomposition4;
 
-struct PointTuple{
+struct PointTuple
+{
 
     PointTuple(int x, int y)
-    : _x{x}, _y{y}
+        : _x{x}, _y{y}
     {
     }
 
     int _x;
     int _y;
 };
-
 
 template <class T>
 void sendToBoard(Board2D &board, T &p_Object, DGtal::Color p_Color);
@@ -74,7 +73,8 @@ Curve getBoundary(T &object)
         sendToBoard(aBoard, *it, Color::Red);
         d++;
     }
-    aBoard.saveSVG("out.svg", 200, 200, 1);
+
+    aBoard.saveSVG("Grain.svg", 200, 200, 10);
 
     // 3) Create a curve from a vector
     Curve boundaryCurve;
@@ -93,25 +93,23 @@ void sendToBoard(Board2D &board, T &p_Object, DGtal::Color p_Color)
     board << p_Object;
 }
 
-
-
-
-float applyShoelace(const std::vector<PointTuple>& points){
-
+float applyShoelace(const std::vector<PointTuple> &points)
+{
     float sum = 0;
     int x1, y1, x2, y2;
 
-    auto firstPoint = points[0]; 
+    auto firstPoint = points[0];
 
     for (int i = 0; i < points.size(); i++)
     {
         auto point = points[i];
         auto nextPoint = firstPoint;
 
-        if(i < points.size() - 1){
+        if (i < points.size() - 1)
+        {
             nextPoint = points[i + 1];
         }
-        
+
         x1 = point._x;
         y1 = point._y;
         x2 = nextPoint._x;
@@ -124,31 +122,29 @@ float applyShoelace(const std::vector<PointTuple>& points){
     return shoelaceRes;
 }
 
-
-
-
-double euclideanDist(double x1, double y1, double x2, double y2){
+double euclideanDist(double x1, double y1, double x2, double y2)
+{
     return sqrt(pow(x2 - x1, 2) + (pow(y2 - y1, 2)));
 }
 
-
-
-double getPerimeter(const std::vector<PointTuple>& points){
+double getPerimeter(const std::vector<PointTuple> &points)
+{
 
     double sum = 0;
     int x1, y1, x2, y2;
 
-    auto firstPoint = points[0]; 
+    auto firstPoint = points[0];
 
     for (int i = 0; i < points.size(); i++)
     {
         auto point = points[i];
         auto nextPoint = firstPoint;
 
-        if(i < points.size() - 1){
+        if (i < points.size() - 1)
+        {
             nextPoint = points[i + 1];
         }
-        
+
         x1 = point._x;
         y1 = point._y;
         x2 = nextPoint._x;
@@ -158,9 +154,6 @@ double getPerimeter(const std::vector<PointTuple>& points){
     }
     return sum;
 }
-
-
-
 
 int main(int argc, char **argv)
 {
@@ -192,104 +185,111 @@ int main(int argc, char **argv)
 
     std::cout << " number of components : " << objects.size() << endl; // Right now size of "objects" is the number of connected components
 
-    // ==================================== Step 4 ======================================
-
     // types definition
     trace.beginBlock("Greedy");
 
+    Board2D aBoardLine;    // DrawLine display
+    Board2D aBoardPolygon; // Polygon display
 
-    // A Freeman chain code is a string composed by the coordinates of the first pixel, and the list of elementary displacements.
-    std::stringstream ss(stringstream::in | stringstream::out);
-
-    // Get the boundary cruve
-    auto curve = getBoundary(objects[113]);
-
-    // Get the first Point range and put it in the freeman chain
-    auto firstPointRange = *(curve.getPointsRange().begin());
-    ss << firstPointRange[0] << " " << firstPointRange[1] << " ";
-
-    // Then each code must appear in the freeman chain
-    for (auto it = curve.getCodesRange().begin(); it != curve.getCodesRange().end(); it++)
+    for (auto &digObj : objects)
     {
-        ss << *it;
+
+        std::cout << std::endl
+                  << std::endl
+                  << "========= New Grain ==========" << std ::endl
+                  << std::endl;
+        // ==================================== Step 4 ======================================
+
+        // A Freeman chain code is a string composed by the coordinates of the first pixel, and the list of elementary displacements.
+        std::stringstream ss(stringstream::in | stringstream::out);
+
+        // Get the boundary cruve
+        auto curve = getBoundary(digObj);
+
+        // Get the first Point range and put it in the freeman chain
+        auto firstPointRange = *(curve.getPointsRange().begin());
+        ss << firstPointRange[0] << " " << firstPointRange[1] << " ";
+
+        // Then each code must appear in the freeman chain
+        for (auto it = curve.getCodesRange().begin(); it != curve.getCodesRange().end(); it++)
+        {
+            ss << *it;
+        }
+
+        ss << std::endl;
+
+        // Construct the Freeman chain
+        Contour4 theContour(ss);
+
+        // == Draw line Version ==
+
+        // Displaying contour
+        aBoardLine << SetMode((*(theContour.begin())).className(), "Grid");
+
+        for (unsigned int i = 0; i < theContour.size(); i++)
+        {
+            auto firstP = theContour.getPoint(i);
+            auto secondP = theContour.getPoint((i + 1) % theContour.size());
+            aBoardLine << firstP;
+            aBoardLine.drawLine(firstP[0], firstP[1],
+                                secondP[0], secondP[1]);
+        }
+
+        // Segmentation
+        Decomposition4 theDecomposition(theContour.begin(), theContour.end(), DSS4());
+
+        // Draw each segment
+        string styleName = "";
+
+        for (Decomposition4::SegmentComputerIterator
+                 it = theDecomposition.begin(),
+                 itEnd = theDecomposition.end();
+             it != itEnd; ++it)
+        {
+            aBoardPolygon << SetMode("ArithmeticalDSS", "Points")
+                          << it->primitive();
+            aBoardPolygon << SetMode("ArithmeticalDSS", "BoundingBox")
+                          << CustomStyle("ArithmeticalDSS/BoundingBox",
+                                         new CustomPenColor(Color::Blue))
+                          << it->primitive();
+        }
+
+        // ==================================== Step 5 ======================================
+
+        std::cout << "AREA : " << std::endl
+                  << std::endl;
+
+        auto areaGridPoints = digObj.size();
+        std::cout << "From grid points : " << areaGridPoints << std::endl;
+
+        // Shoelace Computation
+        std::vector<PointTuple> polygonPoints;
+
+        for (auto &segment : theDecomposition)
+        {
+            auto x = (*(segment.begin()))[0];
+            auto y = (*(segment.begin()))[1];
+            polygonPoints.push_back(PointTuple(x, y));
+        }
+
+        auto areaPolygon = applyShoelace(polygonPoints);
+        std::cout << "From Polygon shape : " << areaPolygon << std::endl;
+
+        // ==================================== Step 6 ======================================
+
+        std::cout << std::endl
+                  << "Perimeter : " << std::endl
+                  << std::endl;
+
+        auto perimeterFromBoundary = curve.size();
+        std::cout << "From Boundary : " << perimeterFromBoundary << std::endl;
+
+        auto perimeterFormula = getPerimeter(polygonPoints);
+        std::cout << "From Polygon shape : " << perimeterFormula << std::endl;
     }
 
-    ss << std::endl;
-
-    // Construct the Freeman chain
-    Contour4 theContour(ss);
-
-    // == Draw line Version ==
-
-    Board2D aBoardLine;
-
-    // displaying contour
-    aBoardLine << SetMode((*(theContour.begin())).className(), "Grid");
-
-    // TODO : À remplacer pour que ça match avec les itérateurs
-    for (unsigned int i = 0; i < theContour.size(); i++)
-    {
-        auto firstP = theContour.getPoint(i);
-        auto secondP = theContour.getPoint((i + 1) % theContour.size());
-        aBoardLine << firstP;
-        aBoardLine.drawLine(firstP[0], firstP[1],
-                            secondP[0], secondP[1]);
-    }
-
-    // == Other way (got from the example) ==
-
-    // Segmentation
-    Decomposition4 theDecomposition(theContour.begin(), theContour.end(), DSS4());
-
-    // Draw each segment
-    string styleName = "";
-    Board2D aBoard;
-    for (Decomposition4::SegmentComputerIterator
-             it = theDecomposition.begin(),
-             itEnd = theDecomposition.end();
-         it != itEnd; ++it)
-    {
-        aBoard << SetMode("ArithmeticalDSS", "Points")
-               << it->primitive();
-        aBoard << SetMode("ArithmeticalDSS", "BoundingBox")
-               << CustomStyle("ArithmeticalDSS/BoundingBox",
-                              new CustomPenColor(Color::Blue))
-               << it->primitive();
-    }
-
-    aBoard.saveSVG("greedyOut.svg", 600, 600, 10);
     aBoardLine.saveSVG("greedyOutLineVersion.svg", 600, 600, 10);
-
-    // ==================================== Step 5 ======================================
-
-    auto areaGridPoints = objects[113].size();
-
-    std::cout << "Area Version Grid Points : " << areaGridPoints << std::endl;
-
-
-    // Shoelace Computation
-    std::vector<PointTuple> polygonPoints;
-
-    for(auto &segment : theDecomposition){
-        auto x = (*(segment.begin()))[0];
-        auto y = (*(segment.begin()))[1];
-        polygonPoints.push_back(PointTuple(x, y));
-    }
-    
-
-    auto areaPolygon = applyShoelace(polygonPoints);
-    std::cout << "Area Version Polygon Shape (UF) : " << areaPolygon << std::endl;
-
-
-    // ==================================== Step 6 ======================================
-
-    auto perimeterFromBoundary = curve.size();
-    std::cout << "Perimeter : " << perimeterFromBoundary << std::endl;
-
-
-    auto perimeterFormula = getPerimeter(polygonPoints);
-    std::cout << "Perimeter (Polygon) UF: " << perimeterFormula << std::endl;
-
+    aBoardPolygon.saveSVG("Polygonization.svg", 600, 600, 10);
 
     return 0;
 }

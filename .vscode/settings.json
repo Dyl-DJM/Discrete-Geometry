@@ -78,6 +78,8 @@
         "future": "cpp",
         "cinttypes": "cpp",
         "__nullptr": "cpp",
-        "alignedvector3": "cpp"
+        "alignedvector3": "cpp",
+        "queue": "cpp",
+        "stack": "cpp"
     }
 }
