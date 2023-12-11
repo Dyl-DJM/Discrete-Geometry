@@ -1,5 +1,13 @@
 # TP1
 
+### INTRODUCTION
+
+All the code, and the whole process of my work on this practical work is available on github : 
+
+https://github.com/Dyl-DJM/Discrete-Geometry.git
+
+(There is a better display of this report : TP1/TP1.md)
+
 
 ### COMPILATION
 
