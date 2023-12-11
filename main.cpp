@@ -63,11 +63,7 @@ template <class T>
 void sendToBoard(Board2D &board, T &p_Object, DGtal::Color p_Color);
 
 /**
- *
- *
- *
- *
- *
+ * Computes the boundary of a digital Object
  */
 template <class T>
 Curve getBoundary(T &object)
@@ -192,8 +188,6 @@ float getCircularity(float area, float perimeter){
     return pow(perimeter, 2) / (4 * M_PI * area);
 }
 
-
-
 Stats getStats(std::vector<float> values){
 
     auto stats = Stats();
@@ -239,7 +233,7 @@ int main(int argc, char **argv)
     Image basmatiSeg = PGMReader<Image>::importPGM("../RiceGrains/Rice_basmati_seg_bin.pgm");
 
     // 1) make a "digital set" of proper size
-    Image img = japSeg;
+    Image img = basmatiSeg;
     Z2i::DigitalSet set2d(img.domain());
 
 
@@ -382,6 +376,9 @@ int main(int argc, char **argv)
 
     aBoardLine.saveSVG("greedyOutLineVersion.svg", 600, 600, 10);
     aBoardPolygon.saveSVG("Polygonization.svg", 600, 600, 10);
+
+
+    // ==================================== Step 8 ======================================
 
 
     std::cout << std::endl << "======= (Statistic presentation) =======" << std::endl << std::endl;
