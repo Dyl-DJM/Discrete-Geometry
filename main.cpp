@@ -25,6 +25,7 @@ typedef FreemanChain<int> Contour4;
 typedef ArithmeticalDSSComputer<Contour4::ConstIterator, int, 4> DSS4;
 typedef GreedySegmentation<DSS4> Decomposition4;
 
+// Own structure to store points
 struct PointTuple
 {
 
@@ -40,23 +41,32 @@ struct PointTuple
 template <class T>
 void sendToBoard(Board2D &board, T &p_Object, DGtal::Color p_Color);
 
+/**
+ *
+ *
+ *
+ *
+ *
+ */
 template <class T>
-Curve getBoundary(T &object)
+Curve getBoundary(T &object, const Z2i::DigitalSet &set2d)
 {
     // Khalimsky space
     KSpace kSpace;
     // we need to add a margine to prevent situations such that an object touch the bourder of the domain
-    kSpace.init(object.domain().lowerBound() - Point(),
-                object.domain().upperBound(), true);
+    kSpace.init(object.domain().lowerBound() - Point(1, 1),
+                object.domain().upperBound() + Point(1, 1), true);
+
+    // auto set2d = object.pointSet();
 
     // 1) Call Surfaces::findABel() to find a cell which belongs to the border
-    auto set2d = object.pointSet();
     auto aCell = Surfaces<Z2i::KSpace>::findABel(kSpace, set2d, 10000);
 
     std::vector<Z2i::Point> boundaryPoints; // boundary points are going to be stored here
 
     // 2) Call Surfece::track2DBoundaryPoints to extract the boundary of the object
     SurfelAdjacency<KSpace::dimension> SAdj(true);
+
     Surfaces<KSpace>::track2DBoundaryPoints(boundaryPoints, kSpace, SAdj, set2d, aCell);
 
     Board2D aBoard;
@@ -81,6 +91,7 @@ Curve getBoundary(T &object)
     std::vector<SCell> contour; // contour
 
     // tracking and init grid curve
+
     Surfaces<KSpace>::track2DBoundary(contour, kSpace, SAdj, set2d, aCell);
     boundaryCurve.initFromSCellsVector(contour);
     return boundaryCurve;
@@ -191,20 +202,20 @@ int main(int argc, char **argv)
     Board2D aBoardLine;    // DrawLine display
     Board2D aBoardPolygon; // Polygon display
 
-    for (auto &digObj : objects)
+    for (auto &currentComponent : objects)
     {
-
         std::cout << std::endl
                   << std::endl
                   << "========= New Grain ==========" << std ::endl
                   << std::endl;
+
         // ==================================== Step 4 ======================================
 
         // A Freeman chain code is a string composed by the coordinates of the first pixel, and the list of elementary displacements.
         std::stringstream ss(stringstream::in | stringstream::out);
 
         // Get the boundary cruve
-        auto curve = getBoundary(digObj);
+        auto curve = getBoundary(currentComponent, set2d);
 
         // Get the first Point range and put it in the freeman chain
         auto firstPointRange = *(curve.getPointsRange().begin());
@@ -259,7 +270,7 @@ int main(int argc, char **argv)
         std::cout << "AREA : " << std::endl
                   << std::endl;
 
-        auto areaGridPoints = digObj.size();
+        auto areaGridPoints = currentComponent.size();
         std::cout << "From grid points : " << areaGridPoints << std::endl;
 
         // Shoelace Computation
@@ -284,9 +295,19 @@ int main(int argc, char **argv)
         auto perimeterFromBoundary = curve.size();
         std::cout << "From Boundary : " << perimeterFromBoundary << std::endl;
 
-        auto perimeterFormula = getPerimeter(polygonPoints);
-        std::cout << "From Polygon shape : " << perimeterFormula << std::endl;
+        auto perimeterPolygon = getPerimeter(polygonPoints);
+        std::cout << "From Polygon shape : " << perimeterPolygon << std::endl;
+
+        // ==================================== Step 7 ======================================
+
+        auto circularity = pow(perimeterPolygon, 2) / (4 * M_PI * areaPolygon);
+
+        std::cout << std::endl
+                  << "Circularity : " << circularity << std::endl;
     }
+
+    std::cout << std::endl
+              << "End of the analysis !" << std::endl;
 
     aBoardLine.saveSVG("greedyOutLineVersion.svg", 600, 600, 10);
     aBoardPolygon.saveSVG("Polygonization.svg", 600, 600, 10);

@@ -83,10 +83,12 @@ By applying my getBoundary() function on the different segmented images, I could
 Normal : 
 
 ![Japanese Greedy result](greedyJapanese.svg "Japanese Greedy result")
+![Japanese Greedy result](greedyJapaneseFull.svg "Japanese Greedy result")
 
 DrawLine() version : 
 
 ![Japanese Greedy result with line](greedyJapaneseLineVersion.svg "Japanese Greedy result with line")
+![Japanese Greedy result](greedyJapaneseLineFull.svg "Japanese Greedy result")
 
 *Freeman Chain :* 1292 1112 30303033033033030300001001010010110101011011010110110110111011111011111011111111011111111111211111211212112121212212122222222222222232232232323232323232332332332333233323333233333323333333333303030030303030303030330330
 
@@ -96,10 +98,12 @@ DrawLine() version :
 Normal : 
 
 ![Camargue Greedy result](greedyCamargue.svg "Camargue Greedy result")
+![Camargue Greedy result](greedyCamargueFull.svg "Camargue Greedy result")
 
 DrawLine() version : 
 
 ![Camargue Greedy result with line](greedyCamargueLineVersion.svg "Camargue Greedy result with line")
+![Camargue Greedy result with line](greedyCamargueLineFull.svg "Camargue Greedy result with line")
 
 *Freeman Chain :* 974 270 3000300300030003000300000030000000300000001000010000100101001010101011011011111111112121212122121221221221221212212122122122122122122122122212212221221222122212212212221222122221222221222222222222322232332333333033303030303030330303333330330333303333033030300300300300300030030000
 
