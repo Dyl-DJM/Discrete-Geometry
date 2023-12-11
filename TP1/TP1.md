@@ -185,9 +185,49 @@ Shoelace computation for the following points :
 Area Version Polygon Shape (UL) : 282165
 ```
 
+I found, the difference between the two methods was significant, thus I looked for another method, after fixing many bugs in my code I implemented a better version using the first points of each segments of the decomposition.
+
+```
+========= New Grain ==========
+
+AREA : 
+
+From grid points : 2037     // First method
+From Polygon shape : 2091   // Second method
+```
 
 
-............ (iF THE GRID IS je sais plus quoi)
+#### Area discussion
+
+In fact, those methods due to the fact that the results depends on the grid resolution we are using. The more squares are present in the grid, the more precise would be our results, this would increase the area value and make it converge more and more.
+
+<br>
+
+![Grid display](GridRes.png "Grid display")
+
+<p style="text-align: center;"><b>Figure</b> : Explanation of multigrid convergence</p>
+
+<br>
+
+The first area computation method counts the amount of squares inside the digital object it fits totally with the multigrid convergent property.
+
+However, the second one take points and make a computation based on it. At least we can also say that this method keeps the multigrid convergent property. 
+In fact, due to the points are taken after we poligonized the digital object and this polygonization is based on the grid resolution, the best resolution we have for our grid in the polygonization process, the best result we are going to have in the Shoelace computation.
+
+
+#### Distribution
+
+I put all the values in a single vector (C++ array) and then made statistical distributions on it.
+
+Thanks to that I got these outputs : 
+
+MEAN
+
+SD
+
+RANGE
+
+
 
 
 ### Step 6 : CALCULATE PERIMETER

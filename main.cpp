@@ -15,6 +15,8 @@
 
 #include <string>
 #include <math.h>
+#include <numeric>
+#include <vector>
 
 using namespace std;
 using namespace DGtal;
@@ -38,6 +40,25 @@ struct PointTuple
     int _y;
 };
 
+
+// Own structure to store statistic information
+struct Stats
+{
+
+    // Overloading the << operator
+    friend std::ostream& operator<<(std::ostream& os, const Stats& obj) {
+        os << "Mean : " << obj._mean << std::endl <<
+        "SD : " << obj._sd << std::endl <<
+        "Range : " << obj._range <<std::endl;
+
+        return os;
+    }
+
+    float _mean;
+    float _sd;
+    float _range;
+};
+
 template <class T>
 void sendToBoard(Board2D &board, T &p_Object, DGtal::Color p_Color);
 
@@ -49,7 +70,7 @@ void sendToBoard(Board2D &board, T &p_Object, DGtal::Color p_Color);
  *
  */
 template <class T>
-Curve getBoundary(T &object, const Z2i::DigitalSet &set2d)
+Curve getBoundary(T &object)
 {
     // Khalimsky space
     KSpace kSpace;
@@ -57,10 +78,10 @@ Curve getBoundary(T &object, const Z2i::DigitalSet &set2d)
     kSpace.init(object.domain().lowerBound() - Point(1, 1),
                 object.domain().upperBound() + Point(1, 1), true);
 
-    // auto set2d = object.pointSet();
+    auto set2d = object.pointSet();
 
     // 1) Call Surfaces::findABel() to find a cell which belongs to the border
-    auto aCell = Surfaces<Z2i::KSpace>::findABel(kSpace, set2d, 10000);
+    auto aCell = Surfaces<Z2i::KSpace>::findABel(kSpace, set2d, 100000);
 
     std::vector<Z2i::Point> boundaryPoints; // boundary points are going to be stored here
 
@@ -166,6 +187,45 @@ double getPerimeter(const std::vector<PointTuple> &points)
     return sum;
 }
 
+
+float getCircularity(float area, float perimeter){
+    return pow(perimeter, 2) / (4 * M_PI * area);
+}
+
+
+
+Stats getStats(std::vector<float> values){
+
+    auto stats = Stats();
+
+    // Mean
+    auto meanRes = std::accumulate(values.begin(), values.end(), 0.0) / values.size();
+    
+    // SD
+    std::vector<float> squares;
+    squares.resize(values.size());
+
+    std::transform(values.begin(), values.end(), squares.begin(), [&meanRes](float val){return pow(meanRes - val, 2);});
+    auto sdRes = sqrt(std::accumulate(squares.begin(), squares.end(), 0.0) / values.size());
+
+    // Range
+    auto max = std::max_element(values.begin(), values.end());
+    auto min = std::min_element(values.begin(), values.end());
+
+    float rangeRes = 0;
+
+    if(max != values.end() && min != values.end()){
+        rangeRes = *max - *min;
+    }
+    
+    stats._mean = meanRes;
+    stats._sd = sdRes;
+    stats._range = rangeRes;
+
+    return stats;
+}
+
+
 int main(int argc, char **argv)
 {
     setlocale(LC_NUMERIC, "us_US");                                            // To prevent French local settings
@@ -181,6 +241,7 @@ int main(int argc, char **argv)
     // 1) make a "digital set" of proper size
     Image img = japSeg;
     Z2i::DigitalSet set2d(img.domain());
+
 
     // 2) populate a digital set from the image using SetFromImage::append()
     SetFromImage<Z2i::DigitalSet>::append<Image>(set2d, img, 1, 255);
@@ -202,6 +263,12 @@ int main(int argc, char **argv)
     Board2D aBoardLine;    // DrawLine display
     Board2D aBoardPolygon; // Polygon display
 
+
+    // Stats storage
+    std::vector<float> areas;
+    std::vector<float> perimeters;
+    std::vector<float> circularities;
+
     for (auto &currentComponent : objects)
     {
         std::cout << std::endl
@@ -215,7 +282,7 @@ int main(int argc, char **argv)
         std::stringstream ss(stringstream::in | stringstream::out);
 
         // Get the boundary cruve
-        auto curve = getBoundary(currentComponent, set2d);
+        auto curve = getBoundary(currentComponent);
 
         // Get the first Point range and put it in the freeman chain
         auto firstPointRange = *(curve.getPointsRange().begin());
@@ -284,6 +351,7 @@ int main(int argc, char **argv)
         }
 
         auto areaPolygon = applyShoelace(polygonPoints);
+        areas.push_back(areaPolygon);
         std::cout << "From Polygon shape : " << areaPolygon << std::endl;
 
         // ==================================== Step 6 ======================================
@@ -296,11 +364,14 @@ int main(int argc, char **argv)
         std::cout << "From Boundary : " << perimeterFromBoundary << std::endl;
 
         auto perimeterPolygon = getPerimeter(polygonPoints);
+        perimeters.push_back(perimeterPolygon);
+
         std::cout << "From Polygon shape : " << perimeterPolygon << std::endl;
 
         // ==================================== Step 7 ======================================
 
-        auto circularity = pow(perimeterPolygon, 2) / (4 * M_PI * areaPolygon);
+        auto circularity = getCircularity(areaPolygon, perimeterPolygon);  // Use the multigrid convergent methods for area and perimeter
+        circularities.push_back(circularity);
 
         std::cout << std::endl
                   << "Circularity : " << circularity << std::endl;
@@ -311,6 +382,14 @@ int main(int argc, char **argv)
 
     aBoardLine.saveSVG("greedyOutLineVersion.svg", 600, 600, 10);
     aBoardPolygon.saveSVG("Polygonization.svg", 600, 600, 10);
+
+
+    std::cout << std::endl << "======= (Statistic presentation) =======" << std::endl << std::endl;
+
+    std::cout << "< AREA > " << std::endl << getStats(areas) << std::endl;
+    std::cout << "< PERIMETER > " << std::endl << getStats(perimeters) << std::endl;
+    std::cout << "< CIRCULARITY > " << std::endl << getStats(circularities) << std::endl;
+
 
     return 0;
 }
