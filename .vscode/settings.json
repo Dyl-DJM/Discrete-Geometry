@@ -80,6 +80,10 @@
         "__nullptr": "cpp",
         "alignedvector3": "cpp",
         "queue": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "__functional_base": "cpp",
+        "__node_handle": "cpp",
+        "__memory": "cpp",
+        "locale": "cpp"
     }
 }
