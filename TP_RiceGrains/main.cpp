@@ -40,16 +40,16 @@ struct PointTuple
     int _y;
 };
 
-
 // Own structure to store statistic information
 struct Stats
 {
 
     // Overloading the << operator
-    friend std::ostream& operator<<(std::ostream& os, const Stats& obj) {
-        os << "Mean : " << obj._mean << std::endl <<
-        "SD : " << obj._sd << std::endl <<
-        "Range : " << obj._range <<std::endl;
+    friend std::ostream &operator<<(std::ostream &os, const Stats &obj)
+    {
+        os << "Mean : " << obj._mean << std::endl
+           << "SD : " << obj._sd << std::endl
+           << "Range : " << obj._range << std::endl;
 
         return os;
     }
@@ -183,23 +183,25 @@ double getPerimeter(const std::vector<PointTuple> &points)
     return sum;
 }
 
-
-float getCircularity(float area, float perimeter){
+float getCircularity(float area, float perimeter)
+{
     return pow(perimeter, 2) / (4 * M_PI * area);
 }
 
-Stats getStats(std::vector<float> values){
+Stats getStats(std::vector<float> values)
+{
 
     auto stats = Stats();
 
     // Mean
     auto meanRes = std::accumulate(values.begin(), values.end(), 0.0) / values.size();
-    
+
     // SD
     std::vector<float> squares;
     squares.resize(values.size());
 
-    std::transform(values.begin(), values.end(), squares.begin(), [&meanRes](float val){return pow(meanRes - val, 2);});
+    std::transform(values.begin(), values.end(), squares.begin(), [&meanRes](float val)
+                   { return pow(meanRes - val, 2); });
     auto sdRes = sqrt(std::accumulate(squares.begin(), squares.end(), 0.0) / values.size());
 
     // Range
@@ -208,17 +210,17 @@ Stats getStats(std::vector<float> values){
 
     float rangeRes = 0;
 
-    if(max != values.end() && min != values.end()){
+    if (max != values.end() && min != values.end())
+    {
         rangeRes = *max - *min;
     }
-    
+
     stats._mean = meanRes;
     stats._sd = sdRes;
     stats._range = rangeRes;
 
     return stats;
 }
-
 
 int main(int argc, char **argv)
 {
@@ -235,7 +237,6 @@ int main(int argc, char **argv)
     // 1) make a "digital set" of proper size
     Image img = basmatiSeg;
     Z2i::DigitalSet set2d(img.domain());
-
 
     // 2) populate a digital set from the image using SetFromImage::append()
     SetFromImage<Z2i::DigitalSet>::append<Image>(set2d, img, 1, 255);
@@ -256,7 +257,6 @@ int main(int argc, char **argv)
 
     Board2D aBoardLine;    // DrawLine display
     Board2D aBoardPolygon; // Polygon display
-
 
     // Stats storage
     std::vector<float> areas;
@@ -364,7 +364,7 @@ int main(int argc, char **argv)
 
         // ==================================== Step 7 ======================================
 
-        auto circularity = getCircularity(areaPolygon, perimeterPolygon);  // Use the multigrid convergent methods for area and perimeter
+        auto circularity = getCircularity(areaPolygon, perimeterPolygon); // Use the multigrid convergent methods for area and perimeter
         circularities.push_back(circularity);
 
         std::cout << std::endl
@@ -377,16 +377,18 @@ int main(int argc, char **argv)
     aBoardLine.saveSVG("greedyOutLineVersion.svg", 600, 600, 10);
     aBoardPolygon.saveSVG("Polygonization.svg", 600, 600, 10);
 
-
     // ==================================== Step 8 ======================================
 
+    std::cout << std::endl
+              << "======= (Statistic presentation) =======" << std::endl
+              << std::endl;
 
-    std::cout << std::endl << "======= (Statistic presentation) =======" << std::endl << std::endl;
-
-    std::cout << "< AREA > " << std::endl << getStats(areas) << std::endl;
-    std::cout << "< PERIMETER > " << std::endl << getStats(perimeters) << std::endl;
-    std::cout << "< CIRCULARITY > " << std::endl << getStats(circularities) << std::endl;
-
+    std::cout << "< AREA > " << std::endl
+              << getStats(areas) << std::endl;
+    std::cout << "< PERIMETER > " << std::endl
+              << getStats(perimeters) << std::endl;
+    std::cout << "< CIRCULARITY > " << std::endl
+              << getStats(circularities) << std::endl;
 
     return 0;
 }
