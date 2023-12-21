@@ -12,6 +12,7 @@
 // Vector manipulation
 #include <algorithm>
 #include <numeric>
+#include <tuple>
 
 /* Namespaces */
 using namespace std;
@@ -36,7 +37,7 @@ unsigned int getNbComponents(const Object &digitalObj, std::vector<Object> &obje
 
 /* STEP 2 : Get the number of cavites and components */
 template <typename ObjectType, typename Adjency>
-void ComponentsCavities(const std::string &&title,
+std::tuple<int, int> getComponentsCavities(const std::string &&title,
                         const Z3i::DigitalSet &set_foreground,
                         const Z3i::DigitalSet &set_background,
                         const Adjency &set)
@@ -54,6 +55,8 @@ void ComponentsCavities(const std::string &&title,
     std::cout << title << std::endl;
     std::cout << "Number of components : " << nbcForeground << std::endl;
     std::cout << "Number of cavities : " << nbcBackground << std::endl;
+
+    return std::tuple<int, int>{nbcForeground, nbcBackground};
 }
 
 /* STEP 3 : Creates a new digital object with the binding addjency and topology */
@@ -69,7 +72,7 @@ ObjectType createDigitalObj(const Z3i::DigitalSet &set,
     return obj;
 }
 
-/* STEP 3 : Computes Euler characteristic from number of cells*/
+/* STEP 3 : Computes Euler characteristic from number of cells */
 int computeEuler(const std::vector<unsigned int> &vec)
 {
     int acc = 0;
@@ -80,6 +83,12 @@ int computeEuler(const std::vector<unsigned int> &vec)
         sign *= -1;
     }
     return acc;
+}
+
+
+/* STEP 4 : Computes the number of tunnels in the 3D images */
+int getNbTunnels(int nbComponents, int nbCavities, int euler){
+    return euler + nbCavities - nbComponents;
 }
 
 int main(int argc, char **argv)
@@ -116,17 +125,17 @@ int main(int argc, char **argv)
         // viewer << set_foreground << image.domain() << MyViewer::updateDisplay;
 
         // =========================== STEP 2 ===================================
-        ComponentsCavities<DigObj26_6, DT26_6>("(26, 6) Adjency : ", set_foreground, set_background, dt26_6);
-        ComponentsCavities<DigObj6_26, DT6_26>("(6, 26) Adjency : ", set_foreground, set_background, dt6_26);
+        auto nbCompCavs26 = getComponentsCavities<DigObj26_6, DT26_6>("(26, 6) Adjency : ", set_foreground, set_background, dt26_6);
+        auto nbCompCavs6 = getComponentsCavities<DigObj6_26, DT6_26>("(6, 26) Adjency : ", set_foreground, set_background, dt6_26);
 
         // =========================== STEP 3 ===================================
         std::vector<DigObj26_6> objects;
-        auto digObjForeground = createDigitalObj<DigObj26_6, DT26_6>(set_foreground, dt26_6, objects);
+        auto digObjForeground26 = createDigitalObj<DigObj26_6, DT26_6>(set_foreground, dt26_6, objects);
 
         KSpace kSpace; // Topological space
 
-        kSpace.init(digObjForeground.domain().lowerBound() - Point(1, 1, 1),
-                    digObjForeground.domain().upperBound() + Point(1, 1, 1), true);
+        kSpace.init(digObjForeground26.domain().lowerBound() - Point(1, 1, 1),
+                    digObjForeground26.domain().upperBound() + Point(1, 1, 1), true);
         CC complex(kSpace);
         complex.construct<DigitalSet>(set_foreground);
 
@@ -147,8 +156,30 @@ int main(int argc, char **argv)
         std::cout << std::endl
                   << "Euler (with complex.euler()) : " << complex.euler() << std::endl;
 
+        std::cout << "Euler (with formula) : " << computeEuler(elements) << std::endl;
+
+
+        // =========================== STEP 4 ===================================
+
+        // Initialize the 
+        std::vector<DigObj6_26> objectsBis;
+        auto digObjForeground6 = createDigitalObj<DigObj6_26, DT6_26>(set_foreground, dt6_26, objectsBis);
+
+        KSpace kSpace6; // Topological space
+
+        kSpace6.init(digObjForeground6.domain().lowerBound() - Point(1, 1, 1),
+                    digObjForeground6.domain().upperBound() + Point(1, 1, 1), true);
+        CC complex6(kSpace6);
+        complex6.construct<DigitalSet>(set_foreground);
+
+        auto tunnels26_6 = getNbTunnels(std::get<0>(nbCompCavs26), std::get<1>(nbCompCavs26),  complex.euler());
+        auto tunnels6_26 = getNbTunnels(std::get<0>(nbCompCavs6), std::get<1>(nbCompCavs6),  complex6.euler());
+
         std::cout << std::endl
-                  << "Euler (with formula) : " << computeEuler(elements) << std::endl;
+                  << "Nb tunnels (26 Adjency): " << tunnels26_6 << std::endl;
+
+        std::cout << "Nb tunnels (6 Adjency): " << tunnels6_26 << std::endl;
+
 
         // application.exec();
 
