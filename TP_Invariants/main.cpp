@@ -38,9 +38,9 @@ unsigned int getNbComponents(const Object &digitalObj, std::vector<Object> &obje
 /* STEP 2 : Get the number of cavites and components */
 template <typename ObjectType, typename Adjency>
 std::tuple<int, int> getComponentsCavities(const std::string &&title,
-                        const Z3i::DigitalSet &set_foreground,
-                        const Z3i::DigitalSet &set_background,
-                        const Adjency &set)
+                                           const Z3i::DigitalSet &set_foreground,
+                                           const Z3i::DigitalSet &set_background,
+                                           const Adjency &set)
 {
     // Foreground
     ObjectType DOForeground(set, set_foreground);
@@ -85,9 +85,9 @@ int computeEuler(const std::vector<unsigned int> &vec)
     return acc;
 }
 
-
 /* STEP 4 : Computes the number of tunnels in the 3D images */
-int getNbTunnels(int nbComponents, int nbCavities, int euler){
+int getNbTunnels(int nbComponents, int nbCavities, int euler)
+{
     return euler + nbCavities - nbComponents;
 }
 
@@ -158,28 +158,26 @@ int main(int argc, char **argv)
 
         std::cout << "Euler (with formula) : " << computeEuler(elements) << std::endl;
 
-
         // =========================== STEP 4 ===================================
 
-        // Initialize the 
+        // Initialize the
         std::vector<DigObj6_26> objectsBis;
         auto digObjForeground6 = createDigitalObj<DigObj6_26, DT6_26>(set_foreground, dt6_26, objectsBis);
 
         KSpace kSpace6; // Topological space
 
         kSpace6.init(digObjForeground6.domain().lowerBound() - Point(1, 1, 1),
-                    digObjForeground6.domain().upperBound() + Point(1, 1, 1), true);
+                     digObjForeground6.domain().upperBound() + Point(1, 1, 1), true);
         CC complex6(kSpace6);
         complex6.construct<DigitalSet>(set_foreground);
 
-        auto tunnels26_6 = getNbTunnels(std::get<0>(nbCompCavs26), std::get<1>(nbCompCavs26),  complex.euler());
-        auto tunnels6_26 = getNbTunnels(std::get<0>(nbCompCavs6), std::get<1>(nbCompCavs6),  complex6.euler());
+        auto tunnels26_6 = getNbTunnels(std::get<0>(nbCompCavs26), std::get<1>(nbCompCavs26), complex.euler());
+        auto tunnels6_26 = getNbTunnels(std::get<0>(nbCompCavs6), std::get<1>(nbCompCavs6), complex6.euler());
 
         std::cout << std::endl
                   << "Nb tunnels (26 Adjency): " << tunnels26_6 << std::endl;
 
         std::cout << "Nb tunnels (6 Adjency): " << tunnels6_26 << std::endl;
-
 
         // application.exec();
 
